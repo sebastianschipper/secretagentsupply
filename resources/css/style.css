@@ -8,7 +8,6 @@ body {
   color: white;
 }
 .site-container {
-  display: flex;
   width: 960px;
   margin: auto;
   display: flex;
@@ -38,13 +37,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: flex-start;
 }
 .offerbox {
   display: inline-flex;
   flex-direction: column;
   background-color: black;
-
   width: 20rem;
   font-weight: bold;
   padding: 2rem 3rem;
@@ -64,6 +61,9 @@ nav {
 }
 nav .site-container {
   justify-content: space-between;
+}
+.tabletnav {
+  display: none;
 }
 
 /* Shop Section */
@@ -118,4 +118,76 @@ footer {
   background-color: black;
   display: flex;
   justify-content: flex-start;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .site-container {
+    width: 100%;
+  }
+  .shop {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .product_wrapper {
+    width: 47%;
+  }
+  .glasses {
+    display: none;
+  }
+  .desktopnav {
+    display: none;
+  }
+  .tabletnav {
+    display:inline;
+  }
+  nav {
+      text-align: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .mainbanner {
+    align-items: flex-end;
+    height: 15rem;
+  }
+  .mainbanner .site-container {
+    margin: 0;
+    width: 100%;
+  }
+  .offerbox {
+      padding: 1rem 2rem;
+      width: 100%;
+  }
+  .offerbox_type {
+    padding-bottom: 0.25rem;
+    font-size: 0.77rem;
+  }
+  .offerbox_offer {
+    font-size: 1rem;
+    line-height: 1.2em;
+  }
+  .watch {
+    display: none;
+  }
+  .product_wrapper {
+    width: 90%;
+  }
+  .location-wrapper {
+    width: 90%;
+    padding-bottom: 0.5rem;
+  }
+  .contact {
+    flex-wrap:wrap;
+    justify-content: center;
+  }
+  .shop {
+    justify-content: center;
+  }
+  footer .site-container {
+    justify-content: center;
+  }
+
 }
